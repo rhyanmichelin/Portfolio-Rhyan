@@ -6,8 +6,12 @@
     font-family: 'Poppins', sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
-    background-color: #000;
+    background-color: #0D0D0D;
     height: 100vh;
 }
 
@@ -24,7 +28,7 @@ body {
     padding: 10px 40px;
     font-size: 18px;
     font-weight: 600;
-    background-color: #ff2600;
+    background-color: #D7F205;
     border: 0;
     border-radius: 30px;
     cursor: pointer;
@@ -38,12 +42,12 @@ h2.titulo {
 }
 
 h2.titulo span {
-    color: #ff2600;
+    color: #D7F205;
 }
 
 button:hover,
 form .btn-enviar input:hover {
-    box-shadow: 0px 0px 8px #ff2600;
+    box-shadow: 0px 0px 8px #D7F205;
     transform: scale(1.05);
 }
 
@@ -86,7 +90,7 @@ header nav.menu-desktop ul li {
 }
 
 .btn-abrir-menu i{
-    color: #ff2600;
+    color: #D7F205;
     font-size: 40px;
 }
 
@@ -116,7 +120,7 @@ header nav.menu-desktop ul li {
 }
 
 .menu-mobile .btn-fechar i{
-    color: #ff2600;
+    color: #D7F205;
     font-size: 30px;
 }
 
@@ -133,7 +137,7 @@ header nav.menu-desktop ul li {
 }   
 
 .menu-mobile nav ul li a:hover{
-    background-color: #ff2600;
+    background-color: #D7F205;
     color: #000;
 }
 
@@ -160,13 +164,64 @@ section.topo-do-site .flex {
 }
 
 .topo-do-site h1 {
-    color: #fff;
+    color: #ffff;
     font-size: 42px;
     line-height: 40px;
 }
 
 .topo-do-site .txt-topo-site h1 span {
-    color: #ff2600;
+    color: #D7F205;
+    position: relative;
+}
+
+.topo-do-site h1 span::before {
+    content: "";
+    color: #D7F205;
+    animation: palavras 25s infinite;
+}
+
+.txt-topo-site h1 span::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    border-left: 5px solid #D7F205;
+    right: -10px;
+    animation: cursor .8s infinite, digita 25s steps(15) infinite;
+    width: calc(100%);
+    background-color: #0D0D0D;
+}
+
+@keyframes digita {
+    10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95%{
+        width: 0;
+    }
+    5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85%{
+        width: calc(100% + 10px); 
+    }
+}
+
+@keyframes cursor {
+    0%{
+        border-left: 3px solid #0D0D0D;
+    }
+}
+
+@keyframes palavras {
+    0%,20%{
+        content: "AO MEU PORTFÓLIO.";
+    }
+    21%,40%{
+        content: ", SOU O RHYAN.";
+    }
+    41%,60%{
+        content: " DESENVOLVEDOR.";
+    }
+    61%,80%{
+        content: " DESIGNER GRÁFICO.";
+    }
+    81%,100%{
+        content: " APROVEITE O SITE.";
+    }
 }
 
 .topo-do-site .txt-topo-site p {
@@ -209,12 +264,13 @@ section.especiliadades .flex {
 
 .especiliadades .especialidades-box:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 20px #ffffff78;
+    box-shadow: 0 0 20px #D7F205;
+    background-color: #080808
 }
 
 .especiliadades .especialidades-box i {
     font-size: 70px;
-    color: #ff2600;
+    color: #D7F205;
 }
 
 .especiliadades .especialidades-box h3 {
@@ -243,7 +299,7 @@ section.sobre .flex {
 }
 
 .sobre .txt-sobre h2 span {
-    color: #ff2600;
+    color: #D7F205;
     display: block;
 }
 
@@ -257,7 +313,7 @@ section.sobre .flex {
     height: 60px;
     border-radius: 50%;
     border: none;
-    background-color: #ff2600;
+    background-color: #D7F205;
     font-size: 22px;
     cursor: pointer;
     margin: 0 5px;
@@ -351,7 +407,7 @@ form .btn-enviar {
 
 form .btn-enviar input {
     width: 120px;
-    background-color: #ff2600;
+    background-color: #D7F205;
     color: #000;
     font-weight: 700;
     cursor: pointer;
@@ -374,11 +430,11 @@ footer .line-footer {
 }
 
 .borda {
-    border-top: 2px solid #ff2600;
+    border-top: 2px solid #D7F205;
 }
 
 footer .line-footer p i {
-    color: #ff2600;
+    color: #D7F205;
     font-size: 22px;
 }
 
